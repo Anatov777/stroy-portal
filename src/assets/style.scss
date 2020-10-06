@@ -1,0 +1,60 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+// Основные стили
+
+.header {
+  .header__content {
+    .nav-primary {
+      background: #fafbfc;
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0px 15px;
+        .nav-primary__list {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          min-height: 32px;
+          & > li:first-child {
+            margin-right: auto;
+            
+          }
+          & > li {
+            a {
+              display: flex;
+              align-items: center;
+              img + span,
+              span + img {
+                margin-left: 8px;
+              }
+            }
+          }
+          li + li {
+            margin-left: 24px;
+          }
+          a {
+            text-decoration: none;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 20px;
+            color: #708598;
+          }
+        }
+      }
+    }
+  }
+}
