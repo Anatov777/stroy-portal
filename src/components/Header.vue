@@ -21,7 +21,28 @@
           </ul>
         </div>
       </nav>
-      <div class="header__body">Logo</div>
+      <div class="header__body">
+        <div class="container">
+          <img src="images/logo.svg" alt="logo" class="logo" />
+          <div class="catalog">
+            <img src="images/burger.svg" alt="burger" />
+            <span>Каталог</span>
+          </div>
+          <div class="search">
+            <input type="search" class="search__input" placeholder="Хочу найти..."/>
+            <img src="images/search.svg" alt="search-icon" />
+          </div>
+          <div class="list">
+            <div>
+              <img src="images/list.svg" alt="burger" />
+            </div>
+            <span>Список</span>
+          </div>
+          <div class="profile">
+            <span>A</span>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 </template>

@@ -7,51 +7,167 @@
 
 body {
   margin: 0;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  color: #050f19;
 }
 
 // Основные стили
 
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
 .header {
   .header__content {
     .nav-primary {
       background: #fafbfc;
-      .container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0px 15px;
-        .nav-primary__list {
-          width: 100%;
-          display: flex;
-          align-items: center;
-          padding: 0;
-          margin: 0;
-          list-style: none;
-          min-height: 32px;
-          & > li:first-child {
-            margin-right: auto;
-            
-          }
-          & > li {
-            a {
-              display: flex;
-              align-items: center;
-              img + span,
-              span + img {
-                margin-left: 8px;
-              }
+      .nav-primary__list {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        min-height: 32px;
+        & > li:first-child {
+          margin-right: auto;
+        }
+        & > li {
+          a {
+            display: flex;
+            align-items: center;
+            img + span,
+            span + img {
+              margin-left: 8px;
             }
           }
-          li + li {
-            margin-left: 24px;
+        }
+        li + li {
+          margin-left: 24px;
+        }
+        a {
+          text-decoration: none;
+          color: #708598;
+        }
+      }
+    }
+    .header__body {
+      padding: 18px 0;
+      border: 1px solid #eceff1;
+      .container {
+        display: flex;
+        align-items: center;
+        * + * {
+          margin-left: 24px;
+        }
+        .logo {
+          width: 221px;
+          height: 48px;
+        }
+        .catalog {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #fed83d;
+          border-radius: 4px;
+          min-width: 116px;
+          height: 40px;
+          box-sizing: border-box;
+          img + span {
+            margin-left: 10px;
           }
-          a {
-            text-decoration: none;
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 12px;
-            line-height: 20px;
+          span {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 24px;
+            color: #050f19;
+          }
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+        .search {
+          position: relative;
+          width: 100%;
+          max-width: 526px;
+          input {
+            min-height: 40px;
+            border: 1px solid #eceff1;
+            box-sizing: border-box;
+            border-radius: 4px;
+            padding: 8px 14px;
+            font-size: 14px;
+            line-height: 24px;
             color: #708598;
+            width: 100%;
+          }
+          img {
+            position: absolute;
+            margin-left: 0;
+            right: 10px;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            transform: translate(0, -50%);
+          }
+        }
+        .list {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #fafbfc;
+          border: 1px solid #eceff1;
+          box-sizing: border-box;
+          border-radius: 4px;
+          min-width: 111px;
+          height: 40px;
+          div + span {
+            margin-left: 12px;
+          }
+          span {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 24px;
+            color: #050f19;
+          }
+          div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            &::after {
+              content: "";
+              position: absolute;
+              width: 10px;
+              height: 10px;
+              background: #e92f2f;
+              border: 2px solid #fafbfc;
+              box-sizing: border-box;
+              border-radius: 50%;
+              top: -4px;
+              right: -4px;
+            }
+          }
+        }
+        .profile {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #9b51e0;
+          min-width: 40px;
+          min-height: 40px;
+          border-radius: 50%;
+          span {
+            color: #fff;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 24px;
           }
         }
       }
